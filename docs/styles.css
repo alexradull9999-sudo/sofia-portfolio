@@ -92,19 +92,25 @@ body.is-ready .page-loader {
 
 .site-nav {
   position: fixed;
-  inset: 0;
+  inset: 0 0 auto;
   z-index: 100;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: start;
+  gap: clamp(28px, 3vw, 48px);
+  min-height: 76px;
+  padding: 17px 5vw 0;
   pointer-events: none;
   text-transform: uppercase;
-  font-size: clamp(15px, 1.35vw, 22px);
-  font-weight: 700;
-  letter-spacing: 0.035em;
+  font-size: clamp(25px, 2.45vw, 38px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.035em;
 }
 
 .nav-link,
 .brand {
-  position: absolute;
-  top: 50%;
+  position: static;
   pointer-events: auto;
   white-space: nowrap;
   transition: opacity 0.25s ease;
@@ -112,7 +118,7 @@ body.is-ready .page-loader {
 
 .nav-link {
   min-height: 44px;
-  padding: 10px 14px;
+  padding: 2px 0 8px;
 }
 
 .nav-link:hover,
@@ -123,41 +129,46 @@ body.is-ready .page-loader {
 }
 
 .nav-link--left {
-  left: 24px;
-  transform: translate(-42%, -50%) rotate(-90deg);
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .brand {
-  left: 50%;
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
   color: var(--ink);
-  transform: translate(-50%, -50%) rotate(-90deg);
-  font-size: clamp(27px, 2.5vw, 40px);
-  letter-spacing: -0.035em;
+  font-size: inherit;
+  letter-spacing: inherit;
 }
 
 .nav-link--right {
-  right: 24px;
-  transform: translate(42%, -50%) rotate(-90deg);
+  grid-column: 3;
+  grid-row: 1;
 }
 
 .mosaic {
   position: relative;
   z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: clamp(8px, 1vw, 16px);
+  row-gap: 0;
   width: 100%;
-  padding: 8vh var(--side-gap) 16vh;
+  padding: 60px 5vw 14vh;
 }
 
 .mosaic-row {
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  min-height: 14vh;
+  display: contents;
 }
 
 .project-card {
   position: relative;
-  flex: 0 0 auto;
+  width: 100%;
+  aspect-ratio: 1240 / 1754;
   margin: 0;
+  overflow: hidden;
+  background: #e6e4de;
   text-align: left;
   isolation: isolate;
 }
@@ -175,7 +186,8 @@ body.is-ready .page-loader {
 
 .project-card img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.7s cubic-bezier(0.2, 0.75, 0.25, 1), filter 0.4s ease;
 }
 
@@ -223,22 +235,22 @@ body.is-ready .page-loader {
   transform: translateY(0);
 }
 
-.layout-a { width: 28%; margin-left: 22%; }
-.layout-b { width: 20%; margin: 25vh 0 0 16%; }
-.layout-c { width: 24%; margin: -8vh 0 0 2%; }
-.layout-d { width: 38%; margin: 21vh 0 0 23%; }
-.layout-e { width: 29%; margin: -12vh 0 0 12%; }
-.layout-f { width: 23%; margin: 20vh 0 0 25%; }
-.layout-g { width: 37%; margin: 22vh 0 0 7%; }
-.layout-h { width: 20%; margin: 4vh 0 0 17%; }
-.layout-i { width: 26%; margin: 28vh 0 0 18%; }
-.layout-j { width: 45%; margin: 10vh 0 0 8%; }
-.layout-k { width: 23%; margin: -9vh 0 0 8%; }
-.layout-l { width: 30%; margin: 26vh 0 0 27%; }
-.layout-m { width: 18%; margin: 19vh 0 0 19%; }
-.layout-n { width: 47%; margin: 15vh 0 0 13%; }
-.layout-o { width: 27%; margin: 18vh 0 0 5%; }
-.layout-p { width: 24%; margin: 31vh 0 0 28%; }
+.layout-a { grid-column: 1 / span 5; grid-row: 1; margin-top: 3vw; }
+.layout-b { grid-column: 6 / span 3; grid-row: 1; margin-top: 11vw; }
+.layout-c { grid-column: 9 / span 4; grid-row: 1; }
+.layout-d { grid-column: 1 / span 3; grid-row: 2; }
+.layout-e { grid-column: 4 / span 5; grid-row: 2; margin-top: 7vw; }
+.layout-f { grid-column: 10 / span 3; grid-row: 2; margin-top: 2vw; }
+.layout-g { grid-column: 1 / span 4; grid-row: 3; margin-top: 7vw; }
+.layout-h { grid-column: 5 / span 3; grid-row: 3; }
+.layout-i { grid-column: 8 / span 5; grid-row: 3; margin-top: 5vw; }
+.layout-j { grid-column: 1 / span 4; grid-row: 4; }
+.layout-k { grid-column: 5 / span 3; grid-row: 4; margin-top: 11vw; }
+.layout-l { grid-column: 9 / span 4; grid-row: 4; margin-top: 3vw; }
+.layout-m { grid-column: 1 / span 5; grid-row: 5; margin-top: 7vw; }
+.layout-n { grid-column: 6 / span 3; grid-row: 5; }
+.layout-o { grid-column: 9 / span 4; grid-row: 5; margin-top: 6vw; }
+.layout-p { grid-column: 4 / span 5; grid-row: 6; margin-top: 4vw; }
 
 .site-footer {
   display: grid;
@@ -670,6 +682,7 @@ dialog[open] {
     grid-row: 1;
     justify-self: start;
     font-size: 22px;
+    font-weight: 700;
     letter-spacing: -0.055em;
   }
 
@@ -691,6 +704,7 @@ dialog[open] {
   }
 
   .mosaic {
+    display: block;
     padding: calc(58px + env(safe-area-inset-top)) 0 0;
     background: #fff;
   }
