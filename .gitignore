@@ -1,0 +1,6 @@
+# The repository contains only the optimized GitHub Pages build.
+/*
+!/.gitignore
+!/README.md
+!/docs/
+!/docs/**

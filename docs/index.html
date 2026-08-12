@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="SOFIA — архитектура, интерьеры, развитие территорий и благоустройство."
+    />
+    <meta name="theme-color" content="#f5f4ef" />
+    <title>SOFIA — архитектурное портфолио</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-loader" aria-hidden="true">
+      <span>SOFIA</span>
+    </div>
+
+    <header class="site-nav" aria-label="Главная навигация">
+      <button class="nav-link nav-link--left" type="button" data-open="about">
+        INFO
+      </button>
+      <a class="brand" href="#top" aria-label="SOFIA — наверх">SOFIA</a>
+      <button class="nav-link nav-link--right" type="button" data-open="contacts">
+        CONTACTS
+      </button>
+    </header>
+
+    <main id="top">
+      <h1 class="sr-only">SOFIA — архитектурное портфолио</h1>
+      <section class="mosaic" id="projects" aria-label="Избранные проекты"></section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> SOFIA. Архитектура и интерьеры.</p>
+      <button type="button" data-open="about">INFO</button>
+      <a href="#top">Наверх ↑</a>
+    </footer>
+
+    <dialog class="project-dialog" id="projectDialog">
+      <div class="dialog-bar">
+        <p class="dialog-index" id="projectIndex">01 / 01</p>
+        <h2 id="projectTitle">Название проекта</h2>
+        <button class="close-button" type="button" data-close-project aria-label="Закрыть">
+          Закрыть ×
+        </button>
+      </div>
+      <div class="project-meta">
+        <p id="projectCategory"></p>
+        <p id="projectDescription"></p>
+      </div>
+      <div class="project-gallery" id="projectGallery"></div>
+      <div class="project-pager">
+        <button type="button" data-project-prev>← Предыдущий</button>
+        <button type="button" data-project-next>Следующий →</button>
+      </div>
+    </dialog>
+
+    <dialog class="info-dialog" id="aboutDialog">
+      <div class="info-dialog__bar">
+        <p>SOFIA / INFO</p>
+        <button class="close-button" type="button" data-close-info>CLOSE ×</button>
+      </div>
+      <button class="mobile-close-button" type="button" data-close-info>CLOSE ×</button>
+      <div class="info-profile">
+        <header class="info-profile__hero">
+          <p class="info-profile__side-name" aria-hidden="true">SOFIA</p>
+          <h2><span>sofia.</span><span>architect</span></h2>
+        </header>
+
+        <div class="info-profile__body">
+          <figure class="info-portrait">
+            <img
+              src="./media/sofia-portrait.webp"
+              alt="София, архитектор"
+              width="853"
+              height="1280"
+            />
+            <figcaption>София / архитектор</figcaption>
+          </figure>
+
+          <div class="credentials" aria-label="Опыт и профессиональные направления">
+            <section class="credential-block">
+              <p class="credential-year">2026</p>
+              <h3>Частная архитектурная практика</h3>
+              <p>
+                Проектирование жилых и общественных пространств: от первой
+                концепции до планировочных решений и рабочей документации.
+              </p>
+              <p class="credential-label">Избранные проекты</p>
+              <p>
+                Образовательный центр<br />
+                КРТ в Барнауле<br />
+                Набережная Ивангорода
+              </p>
+            </section>
+
+            <section class="credential-block">
+              <p class="credential-year">2025</p>
+              <h3>Проектная работа</h3>
+              <p>
+                Частные дома, жилые интерьеры, общественные пространства и
+                комплексное развитие территорий.
+              </p>
+              <p class="credential-label">Профессиональный фокус</p>
+              <p>
+                Архитектурные концепции, планировочные решения, интерьеры,
+                благоустройство и визуализация.
+              </p>
+            </section>
+
+            <section class="credential-block credential-block--placeholder">
+              <p class="credential-year">Образование и признание</p>
+              <h3>Архитектурное образование</h3>
+              <p>
+                Здесь можно разместить данные об образовании, конкурсах,
+                дипломах, публикациях и профессиональных наградах Софии.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="info-dialog info-dialog--contacts" id="contactsDialog">
+      <div class="info-dialog__bar">
+        <p>SOFIA / CONTACTS</p>
+        <button class="close-button" type="button" data-close-info>CLOSE ×</button>
+      </div>
+      <button class="mobile-close-button" type="button" data-close-info>CLOSE ×</button>
+      <div class="info-dialog__content info-dialog__content--contacts">
+        <p class="eyebrow">Новый проект</p>
+        <h2>Давайте обсудим<br />ваше пространство.</h2>
+        <div class="contact-list" aria-label="Способы связи">
+          <a class="contact-method" href="tel:+79833995759">
+            <span>Телефон</span>
+            <strong>+7 983 399 5759</strong>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a
+            class="contact-method"
+            href="https://t.me/Soffffffff"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>Telegram</span>
+            <strong>@Soffffffff</strong>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a class="contact-method" href="mailto:hello@sofia.studio">
+            <span>Email</span>
+            <strong>hello@sofia.studio</strong>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
