@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="SOFIA — архитектура, интерьеры, развитие территорий и благоустройство."
+      content="Портфолио Софьи Масаловой — архитектура, интерьеры и развитие территорий."
     />
     <meta name="theme-color" content="#f5f4ef" />
-    <title>SOFIA — архитектурное портфолио</title>
-    <link rel="stylesheet" href="./styles.css?v=4" />
+    <title>SOFIA MASALOVA — архитектурное портфолио</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css?v=5" />
   </head>
   <body>
     <div class="page-loader" aria-hidden="true">
@@ -27,12 +28,12 @@
     </header>
 
     <main id="top">
-      <h1 class="sr-only">SOFIA — архитектурное портфолио</h1>
+      <h1 class="sr-only">Софья Масалова — архитектурное портфолио</h1>
       <section class="mosaic" id="projects" aria-label="Избранные проекты"></section>
     </main>
 
     <footer class="site-footer">
-      <p>© <span id="year"></span> SOFIA. Архитектура и интерьеры.</p>
+      <p>© <span id="year"></span> SOFIA MASALOVA</p>
       <button type="button" data-open="about">INFO</button>
       <a href="#top">Наверх ↑</a>
     </footer>
@@ -46,8 +47,11 @@
         </button>
       </div>
       <div class="project-meta">
-        <p id="projectCategory"></p>
-        <p id="projectDescription"></p>
+        <div class="project-meta__intro">
+          <p class="project-meta__category" id="projectCategory"></p>
+          <p id="projectDescription"></p>
+        </div>
+        <dl class="project-facts" id="projectFacts" aria-label="Основная информация о проекте"></dl>
       </div>
       <div class="project-gallery" id="projectGallery"></div>
       <div class="project-pager">
@@ -63,58 +67,80 @@
       </div>
       <div class="info-profile">
         <header class="info-profile__hero">
-          <p class="info-profile__side-name" aria-hidden="true">SOFIA</p>
-          <h2><span>sofia.</span><span>architect</span></h2>
+          <p class="info-profile__side-name" aria-hidden="true">SOFIA MASALOVA</p>
+          <h2><span>sofia.</span><span>masalova</span></h2>
         </header>
 
         <div class="info-profile__body">
           <figure class="info-portrait">
             <img
-              src="./media/sofia-portrait.webp"
-              alt="София, архитектор"
+              src="./media/sofia-masalova-portrait-2026.jpg"
+              alt="Софья Масалова, архитектор"
               width="853"
               height="1280"
             />
-            <figcaption>София / архитектор</figcaption>
+            <figcaption><span>Софья Масалова</span><span>Архитектор</span></figcaption>
           </figure>
 
           <div class="credentials" aria-label="Опыт и профессиональные направления">
             <section class="credential-block">
-              <p class="credential-year">2026</p>
-              <h3>Частная архитектурная практика</h3>
+              <p class="credential-year">Профиль</p>
+              <h3>Архитектор и градостроитель</h3>
               <p>
-                Проектирование жилых и общественных пространств: от первой
-                концепции до планировочных решений и рабочей документации.
+                Софья Масалова работает с архитектурой, интерьерами и развитием
+                территорий — от исследования места и концепции до рабочей
+                документации и реализации.
               </p>
-              <p class="credential-label">Избранные проекты</p>
+              <p class="credential-label">Профессиональный фокус</p>
               <p>
-                Образовательный центр<br />
-                КРТ в Барнауле<br />
-                Набережная Ивангорода
+                Жилые и общественные здания, городские территории, мастер-планы,
+                общественные пространства и интерьеры.
               </p>
             </section>
 
             <section class="credential-block">
-              <p class="credential-year">2025</p>
-              <h3>Проектная работа</h3>
-              <p>
-                Частные дома, жилые интерьеры, общественные пространства и
-                комплексное развитие территорий.
-              </p>
-              <p class="credential-label">Профессиональный фокус</p>
-              <p>
-                Архитектурные концепции, планировочные решения, интерьеры,
-                благоустройство и визуализация.
-              </p>
+              <p class="credential-year">Опыт</p>
+              <h3>Профессиональная практика</h3>
+              <ul class="credential-list">
+                <li><span>2024</span><p>Главный архитектор проекта, «Самовар Девелопмент Групп», Санкт-Петербург</p></li>
+                <li><span>2022–2023</span><p>Заместитель руководителя направления городских технологий и исследований, Центр компетенций Ленинградской области, Санкт-Петербург</p></li>
+                <li><span>2021–2022</span><p>Главный архитектор отдела рабочего проектирования, Центр компетенций Курской области, Курск</p></li>
+                <li><span>2020–2021</span><p>Архитектор, частная практика, Москва</p></li>
+                <li><span>2017–2019</span><p>Ведущий архитектор, Meta Bureau, Москва</p></li>
+                <li><span>2016–2017</span><p>Архитектор, мастерская деревянной архитектуры Евгения Макаренко, Барнаул</p></li>
+              </ul>
             </section>
 
-            <section class="credential-block credential-block--placeholder">
-              <p class="credential-year">Образование и признание</p>
-              <h3>Архитектурное образование</h3>
+            <section class="credential-block">
+              <p class="credential-year">Образование</p>
+              <h3>Архитектура и городское развитие</h3>
+              <ul class="credential-list">
+                <li><span>2023</span><p>Программа дополнительного образования «Вовлечение горожан в программы развития городской среды», РАНХиГС</p></li>
+                <li><span>2021</span><p>Архитекторы.рф, лидерская программа Института «Стрелка» и ДОМ.РФ</p></li>
+                <li><span>2017</span><p>Бакалавр архитектуры, АлтГТУ им. И. И. Ползунова, Барнаул</p></li>
+              </ul>
+            </section>
+
+            <section class="credential-block">
+              <p class="credential-year">Награды</p>
+              <h3>Конкурсы и признание</h3>
+              <ul class="credential-list">
+                <li><span>2023</span><p>Победитель Всероссийского конкурса создания комфортной городской среды — набережная реки Нарвы в Ивангороде; главный архитектор проекта</p></li>
+                <li><span>2023</span><p>Победитель конкурса туристической инфраструктуры — веломаршрут в Новой Ладоге; автор проекта</p></li>
+                <li><span>2020</span><p>Первая премия конкурса «Стандартное жильё для Якутии»; архитектор в составе команды</p></li>
+                <li><span>2017</span><p>Диплом экспертов фестиваля «Золотая капитель» и серебряный диплом «Архитектуры Восточной Сибири»</p></li>
+                <li><span>2016</span><p>Финалист конкурса «Архитектурный образ России»</p></li>
+              </ul>
+            </section>
+
+            <section class="credential-block">
+              <p class="credential-year">Публикации</p>
+              <h3>Проекты в медиа</h3>
               <p>
-                Здесь можно разместить данные об образовании, конкурсах,
-                дипломах, публикациях и профессиональных наградах Софии.
+                «Проект Байкал», ArchDaily и «Московский комсомолец на Алтае».
               </p>
+              <p class="credential-label">Инструменты</p>
+              <p>Archicad, InDesign, Photoshop, QGIS, Lumion, AutoCAD, Revit и Procreate.</p>
             </section>
           </div>
         </div>
@@ -145,15 +171,15 @@
             <strong>@Soffffffff</strong>
             <span aria-hidden="true">↗</span>
           </a>
-          <a class="contact-method" href="mailto:hello@sofia.studio">
+          <a class="contact-method" href="mailto:sonya-masalova@ya.ru">
             <span>Email</span>
-            <strong>hello@sofia.studio</strong>
+            <strong>sonya-masalova@ya.ru</strong>
             <span aria-hidden="true">↗</span>
           </a>
         </div>
       </div>
     </dialog>
 
-    <script src="./app.js" defer></script>
+    <script src="./app.js?v=5" defer></script>
   </body>
 </html>

@@ -1,83 +1,31 @@
 const MEDIA_ROOT = "./media/21 SPACE";
 
+const categories = [
+  { name: "Архитектура", slug: "architecture" },
+  { name: "Интерьеры", slug: "interiors" },
+  { name: "Развитие территорий", slug: "territories" },
+];
+
 const projects = [
   {
     slug: "university",
     title: "Образовательный центр",
     category: "Архитектура",
     description: "Общественное здание с пластичной линией кровли и открытыми видами на окружающий ландшафт.",
+    facts: { type: "Уточняется", year: "Уточняется", city: "Уточняется", area: "Не указана", note: "Роль в проекте уточняется" },
     cover: `${MEDIA_ROOT}/02 Архитектура/универ/001 визуализация.webp`,
     images: [
-      "001 визуализация.webp",
-      "008 визуализация.webp",
-      "002 формообразование.webp",
-      "003 план_1 этаж.webp",
-      "004 план_2 этаж.webp",
-      "005 фасады универ.webp",
-      "006 фасады универ.webp",
-      "007 ситуационный план.webp",
+      "001 визуализация.webp", "008 визуализация.webp", "002 формообразование.webp",
+      "003 план_1 этаж.webp", "004 план_2 этаж.webp", "005 фасады универ.webp",
+      "006 фасады универ.webp", "007 ситуационный план.webp",
     ].map((file) => `${MEDIA_ROOT}/02 Архитектура/универ/${file}`),
-  },
-  {
-    slug: "programmer-house",
-    title: "Дом программиста",
-    category: "Архитектура",
-    description: "Частный дом с протяжёнными террасами, консольной кровлей и контрастом тёмного металла и тёплого света.",
-    cover: `${MEDIA_ROOT}/02 Архитектура/дом программиста/дом программиста_виз.webp`,
-    images: [
-      `${MEDIA_ROOT}/02 Архитектура/дом программиста/дом программиста_виз.webp`,
-      `${MEDIA_ROOT}/02 Архитектура/дом программиста/воображаемый контекст.webp`,
-    ],
-  },
-  {
-    slug: "ivangorod",
-    title: "Набережная Ивангорода",
-    category: "Развитие территорий",
-    description: "Образ территории, собранный из речного ландшафта, исторических слоёв и локальной визуальной культуры.",
-    cover: `${MEDIA_ROOT}/01 развитие территорий/Ивангород набережная/Ивангород_коллаж.webp`,
-    images: [
-      `${MEDIA_ROOT}/01 развитие территорий/Ивангород набережная/Ивангород_коллаж.webp`,
-      `${MEDIA_ROOT}/01 развитие территорий/Ивангород набережная/Ивангород_коллаж_без фона.webp`,
-    ],
-  },
-  {
-    slug: "korolev",
-    title: "Квартира в Королёве",
-    category: "Интерьеры",
-    description: "Светлый жилой интерьер с мягкой нейтральной палитрой, графичными деталями и прозрачными границами между комнатами.",
-    cover: `${MEDIA_ROOT}/03 Интерьеры/королёв/01.webp`,
-    images: [
-      "01.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp",
-      "07.webp", "08.webp", "09.webp", "10.webp", "11.webp",
-      "королев_планировка.webp", "королев_план монтажа.webp",
-    ].map((file) => `${MEDIA_ROOT}/03 Интерьеры/королёв/${file}`),
-  },
-  {
-    slug: "territory-k",
-    title: "Территория К",
-    category: "Благоустройство",
-    description: "Ландшафт частной территории, в котором архитектура и сезонная растительность формируют единый сценарий.",
-    cover: `${MEDIA_ROOT}/04 Благоустройство/территория К/виз_01_благо.webp`,
-    images: ["виз_01_благо.webp", "виз_02_благо.webp", "виз_03_благо.webp", "виз_04_благо.webp"]
-      .map((file) => `${MEDIA_ROOT}/04 Благоустройство/территория К/${file}`),
-  },
-  {
-    slug: "youth-center",
-    title: "Ресурсный молодёжный центр",
-    category: "Интерьеры",
-    description: "Многофункциональный общественный интерьер с понятной навигацией и яркими цветовыми акцентами.",
-    cover: `${MEDIA_ROOT}/03 Интерьеры/ресурсный молодежный центр/01 приемная.webp`,
-    images: [
-      "01 приемная.webp", "02 кафетерий 1.webp", "03 кафетерий 2.webp", "04 кабинет.webp",
-      "05 коридор.webp", "06 опен с зоной отдыха.webp", "конференц.webp", "конференц 2.webp",
-      "номер_оранж.webp", "номер_серый.webp", "номер_синий.webp", "фасады.webp",
-    ].map((file) => `${MEDIA_ROOT}/03 Интерьеры/ресурсный молодежный центр/${file}`),
   },
   {
     slug: "townhouse",
     title: "Таунхаус",
     category: "Архитектура",
     description: "Жилая секционная застройка с ритмичным фасадом, приватными входами и спокойной природной палитрой.",
+    facts: { type: "Уточняется", year: "Уточняется", city: "Уточняется", area: "Не указана", note: "Роль в проекте уточняется" },
     cover: `${MEDIA_ROOT}/02 Архитектура/таунхаус/01 фасад таунхаус.webp`,
     images: [
       "01 фасад таунхаус.webp", "02 вид таунхаус.webp", "03 разрез таунхаус.webp",
@@ -85,34 +33,11 @@ const projects = [
     ].map((file) => `${MEDIA_ROOT}/02 Архитектура/таунхаус/${file}`),
   },
   {
-    slug: "barnaul",
-    title: "КРТ в Барнауле",
-    category: "Развитие территорий",
-    description: "Комплексное развитие городской территории: анализ ограничений, общественный каркас, транспорт и типология застройки.",
-    cover: `${MEDIA_ROOT}/01 развитие территорий/крт барнаул/10 сравнение застроек.webp`,
-    images: [
-      "01 общие данные.webp", "02 окружающая застройка.webp", "03 охранные зоны.webp",
-      "04 сводная схема граданализа.webp", "05 ценности.webp",
-      "06 технико-экономические показатели проекта.webp", "07 общественный каркас.webp",
-      "08 транспорт.webp", "09 типы застройки.webp", "10 сравнение застроек.webp",
-    ].map((file) => `${MEDIA_ROOT}/01 развитие территорий/крт барнаул/${file}`),
-  },
-  {
-    slug: "rumyantsevo",
-    title: "Квартира в Румянцево",
-    category: "Интерьеры",
-    description: "Компактный жилой интерьер с тёплым деревом, глубокими цветовыми акцентами и встроенными системами хранения.",
-    cover: `${MEDIA_ROOT}/03 Интерьеры/румянцево/01 румянцево_кухня.webp`,
-    images: [
-      "01 румянцево_кухня.webp", "02 румянцево_гостиная.webp", "03 санузел.webp",
-      "04 румянцево_виз_01_вер2.webp", "05 румянцево_виз_02_вер2.webp",
-    ].map((file) => `${MEDIA_ROOT}/03 Интерьеры/румянцево/${file}`),
-  },
-  {
     slug: "camp",
-    title: "Загородный лагерь",
+    title: "Пансионат",
     category: "Архитектура",
-    description: "Реконструкция загородного корпуса с узнаваемым силуэтом, деревянными деталями и современной планировкой.",
+    description: "Загородная резиденция для частной школы верховой езды. Здание из газобетона с отделкой штукатуркой и планкеном спроектировано с учётом требований к эвакуации для общественных объектов.",
+    facts: { type: "Эскизный проект", year: "2017", city: "Московская область", area: "Не указана", note: "Первый реализованный проект" },
     cover: `${MEDIA_ROOT}/02 Архитектура/лагерь/лагерь визуалка.webp`,
     images: [
       "лагерь визуалка.webp", "фото_лагерь.webp", "стройка_лагерь.webp", "лагерь_1 этаж.webp",
@@ -123,7 +48,8 @@ const projects = [
     slug: "jane-jacobs",
     title: "Дом Джейн Джейкобс",
     category: "Архитектура",
-    description: "Городской жилой дом, раскрытый через систему планов, фасадов и цельный архитектурный образ.",
+    description: "Концепция дома-галереи основана на принципах книги Джейн Джейкобс «Жизнь и смерть больших американских городов». Смешение функций, активные первые этажи и разновысотная застройка поддерживают городские сообщества и естественный социальный контроль.",
+    facts: { type: "Концепция", year: "2018", city: "Москва", area: "Не указана", note: "Концепция по принципам Джейн Джейкобс" },
     cover: `${MEDIA_ROOT}/02 Архитектура/Джейн Джейкобс/Фасад 1-2 ночь.webp`,
     images: [
       "Фасад 1-2 ночь.webp", "Фасад 2-1_день.webp", "Фасад А-Л.webp", "Фасад Л-А_день.webp",
@@ -132,19 +58,11 @@ const projects = [
     ].map((file) => `${MEDIA_ROOT}/02 Архитектура/Джейн Джейкобс/${file}`),
   },
   {
-    slug: "kursk-room",
-    title: "Комната в Курске",
-    category: "Интерьеры",
-    description: "Небольшое приватное пространство, организованное через вертикальное хранение, мягкий свет и спокойную палитру.",
-    cover: `${MEDIA_ROOT}/03 Интерьеры/комната курск/01 виз.webp`,
-    images: ["01 виз.webp", "02 виз.webp", "03 виз.webp", "курск_комната.webp"]
-      .map((file) => `${MEDIA_ROOT}/03 Интерьеры/комната курск/${file}`),
-  },
-  {
     slug: "hostel",
     title: "Хостел",
     category: "Архитектура",
     description: "Компактный жилой объём с регулярной фасадной системой и выразительной входной группой.",
+    facts: { type: "Уточняется", year: "Уточняется", city: "Уточняется", area: "Не указана", note: "Роль в проекте уточняется" },
     cover: `${MEDIA_ROOT}/02 Архитектура/хостел/визуализация хостел.webp`,
     images: ["визуализация хостел.webp", "хостел фасады (1).webp", "хостел фасады (2).webp"]
       .map((file) => `${MEDIA_ROOT}/02 Архитектура/хостел/${file}`),
@@ -154,40 +72,86 @@ const projects = [
     title: "Гриль-хаус",
     category: "Архитектура",
     description: "Небольшой павильон для отдыха с открытой планировкой и визуальной связью с ландшафтом.",
+    facts: { type: "Уточняется", year: "Уточняется", city: "Уточняется", area: "Не указана", note: "Роль в проекте уточняется" },
     cover: `${MEDIA_ROOT}/02 Архитектура/гриль-хаус/15.webp`,
     images: ["15.webp", "6.webp", "9.webp", "с1.webp", "с2.webp", "с3.webp", "с4.webp"]
       .map((file) => `${MEDIA_ROOT}/02 Архитектура/гриль-хаус/${file}`),
+  },
+  {
+    slug: "korolev",
+    title: "Квартира в Королёве",
+    category: "Интерьеры",
+    description: "Светлый жилой интерьер с мягкой нейтральной палитрой, графичными деталями и прозрачными границами между комнатами.",
+    facts: { type: "Уточняется", year: "Уточняется", city: "Королёв", area: "Не указана", note: "Роль в проекте уточняется" },
+    cover: `${MEDIA_ROOT}/03 Интерьеры/королёв/01.webp`,
+    images: [
+      "01.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp", "07.webp", "08.webp",
+      "09.webp", "10.webp", "11.webp", "королев_планировка.webp", "королев_план монтажа.webp",
+    ].map((file) => `${MEDIA_ROOT}/03 Интерьеры/королёв/${file}`),
+  },
+  {
+    slug: "youth-center",
+    title: "Ресурсный молодёжный центр",
+    category: "Интерьеры",
+    description: "Многофункциональный общественный интерьер с понятной навигацией и яркими цветовыми акцентами.",
+    facts: { type: "Уточняется", year: "Уточняется", city: "Уточняется", area: "Не указана", note: "Роль в проекте уточняется" },
+    cover: `${MEDIA_ROOT}/03 Интерьеры/ресурсный молодежный центр/01 приемная.webp`,
+    images: [
+      "01 приемная.webp", "02 кафетерий 1.webp", "03 кафетерий 2.webp", "04 кабинет.webp",
+      "05 коридор.webp", "06 опен с зоной отдыха.webp", "конференц.webp", "конференц 2.webp",
+      "номер_оранж.webp", "номер_серый.webp", "номер_синий.webp", "фасады.webp",
+    ].map((file) => `${MEDIA_ROOT}/03 Интерьеры/ресурсный молодежный центр/${file}`),
+  },
+  {
+    slug: "kursk-room",
+    title: "Комната в Курске",
+    category: "Интерьеры",
+    description: "Небольшое приватное пространство, организованное через вертикальное хранение, мягкий свет и спокойную палитру.",
+    facts: { type: "Уточняется", year: "Уточняется", city: "Курск", area: "Не указана", note: "Роль в проекте уточняется" },
+    cover: `${MEDIA_ROOT}/03 Интерьеры/комната курск/01 виз.webp`,
+    images: ["01 виз.webp", "02 виз.webp", "03 виз.webp", "курск_комната.webp"]
+      .map((file) => `${MEDIA_ROOT}/03 Интерьеры/комната курск/${file}`),
+  },
+  {
+    slug: "ivangorod",
+    title: "Набережная Ивангорода",
+    category: "Развитие территорий",
+    description: "Проект раскрывает идентичность Ивангорода через материалы и образы места: камень крепости переосмыслен в бетоне и габионах, графика Ивана Билибина — в рисунке мощения, а история лесопильного завода и речных причалов — в архитектуре мастерских.",
+    facts: { type: "Конкурсная концепция", year: "2023", city: "Ивангород, Ленинградская область", area: "30 000 м²", note: "Главный архитектор проекта; победитель Всероссийского конкурса" },
+    cover: `${MEDIA_ROOT}/01 развитие территорий/Ивангород набережная/Ивангород_коллаж.webp`,
+    images: [
+      `${MEDIA_ROOT}/01 развитие территорий/Ивангород набережная/Ивангород_коллаж.webp`,
+      `${MEDIA_ROOT}/01 развитие территорий/Ивангород набережная/Ивангород_коллаж_без фона.webp`,
+    ],
+  },
+  {
+    slug: "barnaul",
+    title: "КРТ в Барнауле",
+    category: "Развитие территорий",
+    description: "Концепция комплексного развития территории опирается на стандарт КБ Стрелка и учитывает соседство аэропорта, торгового центра и ипподрома. Общественный каркас, транспортная сеть и разные типы малоэтажной застройки формируют связанную городскую среду.",
+    facts: { type: "Концепция КРТ", year: "Уточняется", city: "Барнаул", area: "369,2 га", note: "Высотность застройки — 1–5 этажей" },
+    cover: `${MEDIA_ROOT}/01 развитие территорий/крт барнаул/10 сравнение застроек.webp`,
+    images: [
+      "01 общие данные.webp", "02 окружающая застройка.webp", "03 охранные зоны.webp",
+      "04 сводная схема граданализа.webp", "05 ценности.webp", "06 технико-экономические показатели проекта.webp",
+      "07 общественный каркас.webp", "08 транспорт.webp", "09 типы застройки.webp", "10 сравнение застроек.webp",
+    ].map((file) => `${MEDIA_ROOT}/01 развитие территорий/крт барнаул/${file}`),
   },
   {
     slug: "medovy",
     title: "Посёлок Медовый",
     category: "Развитие территорий",
     description: "Генеральный план жилой территории с иерархией улиц, общественными пространствами и природным каркасом.",
+    facts: { type: "Генеральный план", year: "Уточняется", city: "Уточняется", area: "Не указана", note: "Роль в проекте уточняется" },
     cover: `${MEDIA_ROOT}/01 развитие территорий/медовый/медовый генплан.webp`,
     images: [`${MEDIA_ROOT}/01 развитие территорий/медовый/медовый генплан.webp`],
   },
-  {
-    slug: "extra-rmc",
-    title: "Пространства для общения",
-    category: "Интерьеры",
-    description: "Серия общественных зон молодёжного центра — от спокойных рабочих мест до насыщенных цветом пространств общения.",
-    cover: `${MEDIA_ROOT}/03 Интерьеры/ресурсный молодежный центр/03 кафетерий 2.webp`,
-    images: [
-      "03 кафетерий 2.webp", "02 кафетерий 1.webp", "06 опен с зоной отдыха.webp",
-      "конференц 2.webp", "04 кабинет.webp", "05 коридор.webp",
-    ].map((file) => `${MEDIA_ROOT}/03 Интерьеры/ресурсный молодежный центр/${file}`),
-  },
 ];
 
-const layouts = [
-  ["layout-a", "layout-b"],
-  ["layout-c", "layout-d"],
-  ["layout-e", "layout-f"],
-  ["layout-g", "layout-h"],
-  ["layout-i", "layout-j"],
-  ["layout-k", "layout-l"],
-  ["layout-m", "layout-n"],
-  ["layout-o", "layout-p"],
+const layoutClasses = ["layout-a", "layout-b", "layout-c", "layout-d", "layout-e", "layout-f"];
+const factLabels = [
+  ["type", "Тип проекта"], ["year", "Год"], ["city", "Город"],
+  ["area", "Площадь"], ["note", "Примечание"],
 ];
 
 const mosaic = document.querySelector("#projects");
@@ -197,6 +161,7 @@ const projectTitle = document.querySelector("#projectTitle");
 const projectIndex = document.querySelector("#projectIndex");
 const projectCategory = document.querySelector("#projectCategory");
 const projectDescription = document.querySelector("#projectDescription");
+const projectFacts = document.querySelector("#projectFacts");
 let activeProject = 0;
 
 function asset(path) {
@@ -204,17 +169,24 @@ function asset(path) {
 }
 
 function renderMosaic() {
-  layouts.forEach((rowLayouts, rowIndex) => {
-    const row = document.createElement("div");
-    row.className = "mosaic-row";
+  categories.forEach((category, categoryIndex) => {
+    const categoryProjects = projects.filter((project) => project.category === category.name);
+    const section = document.createElement("section");
+    section.className = "portfolio-section";
+    section.id = category.slug;
+    section.setAttribute("aria-labelledby", `${category.slug}-title`);
 
-    rowLayouts.forEach((layout, itemIndex) => {
-      const index = rowIndex * 2 + itemIndex;
-      const project = projects[index];
-      if (!project) return;
+    const header = document.createElement("header");
+    header.className = "portfolio-section__header";
+    header.innerHTML = `<h2 id="${category.slug}-title">${category.name}</h2><span>${String(categoryIndex + 1).padStart(2, "0")} / ${String(categories.length).padStart(2, "0")}</span>`;
 
+    const grid = document.createElement("div");
+    grid.className = "portfolio-grid";
+
+    categoryProjects.forEach((project, categoryProjectIndex) => {
+      const index = projects.indexOf(project);
       const card = document.createElement("button");
-      card.className = `project-card ${layout}`;
+      card.className = `project-card ${layoutClasses[categoryProjectIndex]}`;
       card.type = "button";
       card.dataset.project = String(index);
       card.setAttribute("aria-label", `Открыть проект «${project.title}»`);
@@ -227,27 +199,39 @@ function renderMosaic() {
 
       const label = document.createElement("span");
       label.className = "project-card__label";
-      label.innerHTML = `
-        <span class="project-card__title">${project.title}</span>
-        <span class="project-card__number">${String(index + 1).padStart(2, "0")}</span>
-      `;
-
+      label.innerHTML = `<span class="project-card__title">${project.title}</span><span class="project-card__number">${String(index + 1).padStart(2, "0")}</span>`;
       card.append(image, label);
-      row.append(card);
+      grid.append(card);
     });
 
-    mosaic.append(row);
+    section.append(header, grid);
+    mosaic.append(section);
   });
+}
+
+function renderFacts(facts) {
+  const fragment = document.createDocumentFragment();
+  factLabels.forEach(([key, label]) => {
+    const row = document.createElement("div");
+    row.className = `project-fact project-fact--${key}`;
+    const term = document.createElement("dt");
+    term.textContent = label;
+    const value = document.createElement("dd");
+    value.textContent = facts[key];
+    row.append(term, value);
+    fragment.append(row);
+  });
+  projectFacts.replaceChildren(fragment);
 }
 
 function renderProject(index) {
   activeProject = (index + projects.length) % projects.length;
   const project = projects[activeProject];
-
   projectTitle.textContent = project.title;
   projectIndex.textContent = `${String(activeProject + 1).padStart(2, "0")} / ${String(projects.length).padStart(2, "0")}`;
   projectCategory.textContent = project.category;
   projectDescription.textContent = project.description;
+  renderFacts(project.facts);
   projectGallery.replaceChildren();
 
   project.images.forEach((source, imageIndex) => {
@@ -257,7 +241,6 @@ function renderProject(index) {
     image.alt = `${project.title}, изображение ${imageIndex + 1}`;
     image.loading = imageIndex === 0 ? "eager" : "lazy";
     image.decoding = "async";
-
     const caption = document.createElement("figcaption");
     caption.innerHTML = `<span>${project.title}</span><span>${String(imageIndex + 1).padStart(2, "0")} / ${String(project.images.length).padStart(2, "0")}</span>`;
     figure.append(image, caption);
@@ -284,11 +267,17 @@ function closeDialog(dialog) {
 
 function updateProjectUrl(index = null) {
   const url = new URL(window.location.href);
-  if (index === null) {
-    url.searchParams.delete("project");
-  } else {
-    url.searchParams.set("project", projects[index].slug);
-  }
+  url.searchParams.delete("view");
+  if (index === null) url.searchParams.delete("project");
+  else url.searchParams.set("project", projects[index].slug);
+  window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
+}
+
+function updateViewUrl(view = null) {
+  const url = new URL(window.location.href);
+  url.searchParams.delete("project");
+  if (view === null) url.searchParams.delete("view");
+  else url.searchParams.set("view", view);
   window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
 }
 
@@ -306,6 +295,7 @@ document.querySelectorAll("[data-open]").forEach((button) => {
     const dialog = document.querySelector(`#${button.dataset.open}Dialog`);
     dialog.showModal();
     document.body.classList.add("is-dialog-open");
+    updateViewUrl(button.dataset.open === "about" ? "info" : "contacts");
   });
 });
 
@@ -319,6 +309,7 @@ document.querySelectorAll("dialog").forEach((dialog) => {
   });
   dialog.addEventListener("close", () => {
     if (dialog === projectDialog) updateProjectUrl();
+    if (dialog.classList.contains("info-dialog")) updateViewUrl();
     if (![projectDialog, ...document.querySelectorAll(".info-dialog")].some((item) => item.open)) {
       document.body.classList.remove("is-dialog-open");
     }
