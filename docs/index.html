@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#f5f4ef" />
     <title>SOFIA MASALOVA — архитектурное портфолио</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css?v=5" />
+    <link rel="stylesheet" href="./styles.css?v=6" />
   </head>
   <body>
     <div class="page-loader" aria-hidden="true">
@@ -21,7 +21,7 @@
       <button class="nav-link nav-link--left" type="button" data-open="about">
         INFO
       </button>
-      <a class="brand" href="#top" aria-label="SOFIA — наверх">SOFIA</a>
+      <a class="brand" href="./" data-home aria-label="SOFIA — к разделам портфолио">SOFIA</a>
       <button class="nav-link nav-link--right" type="button" data-open="contacts">
         CONTACTS
       </button>
@@ -29,13 +29,14 @@
 
     <main id="top">
       <h1 class="sr-only">Софья Масалова — архитектурное портфолио</h1>
-      <section class="mosaic" id="projects" aria-label="Избранные проекты"></section>
+      <section class="category-landing" id="categoryLanding" aria-label="Разделы портфолио"></section>
+      <section class="mosaic" id="projects" aria-label="Проекты выбранного раздела" hidden></section>
     </main>
 
     <footer class="site-footer">
       <p>© <span id="year"></span> SOFIA MASALOVA</p>
       <button type="button" data-open="about">INFO</button>
-      <a href="#top">Наверх ↑</a>
+      <a href="./" data-home>Разделы ↑</a>
     </footer>
 
     <dialog class="project-dialog" id="projectDialog">
@@ -180,6 +181,6 @@
       </div>
     </dialog>
 
-    <script src="./app.js?v=5" defer></script>
+    <script src="./app.js?v=6" defer></script>
   </body>
 </html>

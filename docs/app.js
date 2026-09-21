@@ -1,9 +1,21 @@
 const MEDIA_ROOT = "./media/21 SPACE";
 
 const categories = [
-  { name: "Архитектура", slug: "architecture" },
-  { name: "Интерьеры", slug: "interiors" },
-  { name: "Развитие территорий", slug: "territories" },
+  {
+    name: "Архитектура",
+    slug: "architecture",
+    cover: `${MEDIA_ROOT}/02 Архитектура/универ/001 визуализация.webp`,
+  },
+  {
+    name: "Интерьеры",
+    slug: "interiors",
+    cover: `${MEDIA_ROOT}/03 Интерьеры/королёв/01.webp`,
+  },
+  {
+    name: "Развитие территорий",
+    slug: "territories",
+    cover: `${MEDIA_ROOT}/01 развитие территорий/Ивангород набережная/Ивангород_коллаж.webp`,
+  },
 ];
 
 const projects = [
@@ -12,7 +24,7 @@ const projects = [
     title: "Образовательный центр",
     category: "Архитектура",
     description: "Общественное здание с пластичной линией кровли и открытыми видами на окружающий ландшафт.",
-    facts: { type: "-", year: "-", city: "-", area: "-", note: "-" },
+    facts: { type: "Учебный проект (АлтГТУ им. И. И. Ползунова)", year: "2015", city: "Барнаул", area: "Площадь застройки: 1 416 м²", note: "Курсовой проект" },
     cover: `${MEDIA_ROOT}/02 Архитектура/универ/001 визуализация.webp`,
     images: [
       "001 визуализация.webp", "008 визуализация.webp", "002 формообразование.webp",
@@ -25,7 +37,7 @@ const projects = [
     title: "Таунхаус",
     category: "Архитектура",
     description: "Жилая секционная застройка с ритмичным фасадом, приватными входами и спокойной природной палитрой.",
-    facts: { type: "-", year: "-", city: "-", area: "-", note: "-" },
+    facts: { type: "Учебный проект (АлтГТУ им. И. И. Ползунова)", year: "2015", city: "Барнаул", area: "Площадь застройки: 560 м²", note: "Курсовой проект" },
     cover: `${MEDIA_ROOT}/02 Архитектура/таунхаус/01 фасад таунхаус.webp`,
     images: [
       "01 фасад таунхаус.webp", "02 вид таунхаус.webp", "03 разрез таунхаус.webp",
@@ -72,7 +84,7 @@ const projects = [
     title: "Гриль-хаус",
     category: "Архитектура",
     description: "Небольшой павильон для отдыха с открытой планировкой и визуальной связью с ландшафтом.",
-    facts: { type: "-", year: "-", city: "-", area: "-", note: "-" },
+    facts: { type: "Концепция и рабочая документация", year: "2019", city: "Конаково, Тверская область", area: "Площадь застройки: 258 м²", note: "Ведущий архитектор под руководством ГАП Е. Арефьевой" },
     cover: `${MEDIA_ROOT}/02 Архитектура/гриль-хаус/15.webp`,
     images: ["15.webp", "6.webp", "9.webp", "с1.webp", "с2.webp", "с3.webp", "с4.webp"]
       .map((file) => `${MEDIA_ROOT}/02 Архитектура/гриль-хаус/${file}`),
@@ -82,7 +94,7 @@ const projects = [
     title: "Квартира в Королёве",
     category: "Интерьеры",
     description: "Светлый жилой интерьер с мягкой нейтральной палитрой, графичными деталями и прозрачными границами между комнатами.",
-    facts: { type: "-", year: "-", city: "Королёв", area: "-", note: "-" },
+    facts: { type: "Дизайн-проект интерьера", year: "2020", city: "Королёв", area: "47,5 м²", note: "Главный архитектор проекта" },
     cover: `${MEDIA_ROOT}/03 Интерьеры/королёв/01.webp`,
     images: [
       "01.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp", "07.webp", "08.webp",
@@ -94,7 +106,7 @@ const projects = [
     title: "Ресурсный молодёжный центр",
     category: "Интерьеры",
     description: "Многофункциональный общественный интерьер с понятной навигацией и яркими цветовыми акцентами.",
-    facts: { type: "-", year: "-", city: "-", area: "-", note: "-" },
+    facts: { type: "Концепция интерьера и фасада", year: "2019", city: "Москва", area: "-", note: "Автор концепции" },
     cover: `${MEDIA_ROOT}/03 Интерьеры/ресурсный молодежный центр/01 приемная.webp`,
     images: [
       "01 приемная.webp", "02 кафетерий 1.webp", "03 кафетерий 2.webp", "04 кабинет.webp",
@@ -107,7 +119,7 @@ const projects = [
     title: "Комната в Курске",
     category: "Интерьеры",
     description: "Небольшое приватное пространство, организованное через вертикальное хранение, мягкий свет и спокойную палитру.",
-    facts: { type: "-", year: "-", city: "Курск", area: "-", note: "-" },
+    facts: { type: "Коммерческий проект", year: "2022", city: "Курск", area: "7,51 м²", note: "-" },
     cover: `${MEDIA_ROOT}/03 Интерьеры/комната курск/01 виз.webp`,
     images: ["01 виз.webp", "02 виз.webp", "03 виз.webp", "курск_комната.webp"]
       .map((file) => `${MEDIA_ROOT}/03 Интерьеры/комната курск/${file}`),
@@ -129,7 +141,7 @@ const projects = [
     title: "КРТ в Барнауле",
     category: "Развитие территорий",
     description: "Концепция комплексного развития территории опирается на стандарт КБ Стрелка и учитывает соседство аэропорта, торгового центра и ипподрома. Общественный каркас, транспортная сеть и разные типы малоэтажной застройки формируют связанную городскую среду.",
-    facts: { type: "Концепция КРТ", year: "-", city: "Барнаул", area: "369,2 га", note: "Высотность застройки — 1–5 этажей" },
+    facts: { type: "Концепция КРТ", year: "2021", city: "Барнаул", area: "369,2 га", note: "Высотность застройки: 1–5 этажей" },
     cover: `${MEDIA_ROOT}/01 развитие территорий/крт барнаул/10 сравнение застроек.webp`,
     images: [
       "01 общие данные.webp", "02 окружающая застройка.webp", "03 охранные зоны.webp",
@@ -142,7 +154,7 @@ const projects = [
     title: "Посёлок Медовый",
     category: "Развитие территорий",
     description: "Генеральный план жилой территории с иерархией улиц, общественными пространствами и природным каркасом.",
-    facts: { type: "Генеральный план", year: "-", city: "-", area: "-", note: "-" },
+    facts: { type: "Учебный проект (АлтГТУ им. И. И. Ползунова)", year: "2016", city: "Новосибирская область, близ д. Калаганово", area: "Около 350 га", note: "Генеральный план" },
     cover: `${MEDIA_ROOT}/01 развитие территорий/медовый/медовый генплан.webp`,
     images: [`${MEDIA_ROOT}/01 развитие территорий/медовый/медовый генплан.webp`],
   },
@@ -154,6 +166,7 @@ const factLabels = [
   ["area", "Площадь"], ["note", "Примечание"],
 ];
 
+const categoryLanding = document.querySelector("#categoryLanding");
 const mosaic = document.querySelector("#projects");
 const projectDialog = document.querySelector("#projectDialog");
 const projectGallery = document.querySelector("#projectGallery");
@@ -163,50 +176,123 @@ const projectCategory = document.querySelector("#projectCategory");
 const projectDescription = document.querySelector("#projectDescription");
 const projectFacts = document.querySelector("#projectFacts");
 let activeProject = 0;
+let activeCategory = null;
 
 function asset(path) {
   return encodeURI(path);
 }
 
-function renderMosaic() {
+function categoryForProject(project) {
+  return categories.find((category) => category.name === project.category);
+}
+
+function renderCategoryLanding() {
+  categoryLanding.replaceChildren();
+
   categories.forEach((category, categoryIndex) => {
-    const categoryProjects = projects.filter((project) => project.category === category.name);
-    const section = document.createElement("section");
-    section.className = "portfolio-section";
-    section.id = category.slug;
-    section.setAttribute("aria-labelledby", `${category.slug}-title`);
+    const count = projects.filter((project) => project.category === category.name).length;
+    const card = document.createElement("button");
+    card.className = "category-card";
+    card.type = "button";
+    card.dataset.category = category.slug;
+    card.setAttribute("aria-label", `Открыть раздел «${category.name}»`);
 
-    const header = document.createElement("header");
-    header.className = "portfolio-section__header";
-    header.innerHTML = `<h2 id="${category.slug}-title">${category.name}</h2><span>${String(categoryIndex + 1).padStart(2, "0")} / ${String(categories.length).padStart(2, "0")}</span>`;
+    const heading = document.createElement("span");
+    heading.className = "category-card__heading";
+    heading.innerHTML = `<span class="category-card__title">${category.name}</span><span class="category-card__count">${String(categoryIndex + 1).padStart(2, "0")} / ${String(categories.length).padStart(2, "0")} · ${String(count).padStart(2, "0")}</span>`;
 
-    const grid = document.createElement("div");
-    grid.className = "portfolio-grid";
+    const media = document.createElement("span");
+    media.className = "category-card__media";
+    const image = document.createElement("img");
+    image.src = asset(category.cover);
+    image.alt = `${category.name} — открыть проекты`;
+    image.loading = categoryIndex === 0 ? "eager" : "lazy";
+    image.decoding = "async";
+    media.append(image);
 
-    categoryProjects.forEach((project, categoryProjectIndex) => {
-      const index = projects.indexOf(project);
-      const card = document.createElement("button");
-      card.className = `project-card ${layoutClasses[categoryProjectIndex]}`;
-      card.type = "button";
-      card.dataset.project = String(index);
-      card.setAttribute("aria-label", `Открыть проект «${project.title}»`);
-
-      const image = document.createElement("img");
-      image.src = asset(project.cover);
-      image.alt = `${project.title} — ${project.category}`;
-      image.loading = index < 2 ? "eager" : "lazy";
-      image.decoding = "async";
-
-      const label = document.createElement("span");
-      label.className = "project-card__label";
-      label.innerHTML = `<span class="project-card__title">${project.title}</span><span class="project-card__number">${String(index + 1).padStart(2, "0")}</span>`;
-      card.append(image, label);
-      grid.append(card);
-    });
-
-    section.append(header, grid);
-    mosaic.append(section);
+    const action = document.createElement("span");
+    action.className = "category-card__action";
+    action.textContent = "Смотреть проекты ↗";
+    card.append(heading, media, action);
+    categoryLanding.append(card);
   });
+}
+
+function renderCategory(category) {
+  const categoryIndex = categories.indexOf(category);
+  const categoryProjects = projects.filter((project) => project.category === category.name);
+  mosaic.replaceChildren();
+
+  const section = document.createElement("section");
+  section.className = "portfolio-section";
+  section.id = category.slug;
+  section.setAttribute("aria-labelledby", `${category.slug}-title`);
+
+  const header = document.createElement("header");
+  header.className = "portfolio-section__header";
+  header.innerHTML = `<button class="portfolio-section__back" type="button" data-category-back>← Разделы</button><h2 id="${category.slug}-title">${category.name}</h2><span>${String(categoryIndex + 1).padStart(2, "0")} / ${String(categories.length).padStart(2, "0")}</span>`;
+
+  const grid = document.createElement("div");
+  grid.className = "portfolio-grid";
+
+  categoryProjects.forEach((project, categoryProjectIndex) => {
+    const index = projects.indexOf(project);
+    const card = document.createElement("button");
+    card.className = `project-card ${layoutClasses[categoryProjectIndex]}`;
+    card.type = "button";
+    card.dataset.project = String(index);
+    card.setAttribute("aria-label", `Открыть проект «${project.title}»`);
+
+    const image = document.createElement("img");
+    image.src = asset(project.cover);
+    image.alt = `${project.title} — ${project.category}`;
+    image.loading = categoryProjectIndex < 2 ? "eager" : "lazy";
+    image.decoding = "async";
+
+    const label = document.createElement("span");
+    label.className = "project-card__label";
+    label.innerHTML = `<span class="project-card__title">${project.title}</span><span class="project-card__number">${String(categoryProjectIndex + 1).padStart(2, "0")}</span>`;
+    card.append(image, label);
+    grid.append(card);
+  });
+
+  section.append(header, grid);
+  mosaic.append(section);
+}
+
+function showCategory(slug, updateUrl = true) {
+  const category = categories.find((item) => item.slug === slug);
+  if (!category) return showLanding(updateUrl);
+
+  activeCategory = category;
+  renderCategory(category);
+  categoryLanding.hidden = true;
+  mosaic.hidden = false;
+  window.scrollTo(0, 0);
+
+  if (updateUrl) {
+    const url = new URL(window.location.href);
+    url.searchParams.delete("project");
+    url.searchParams.delete("view");
+    url.searchParams.set("category", category.slug);
+    window.history.pushState({}, "", `${url.pathname}${url.search}${url.hash}`);
+  }
+}
+
+function showLanding(updateUrl = true) {
+  activeCategory = null;
+  mosaic.hidden = true;
+  mosaic.replaceChildren();
+  categoryLanding.hidden = false;
+  window.scrollTo(0, 0);
+
+  if (updateUrl) {
+    const url = new URL(window.location.href);
+    url.searchParams.delete("category");
+    url.searchParams.delete("project");
+    url.searchParams.delete("view");
+    window.history.pushState({}, "", `${url.pathname}${url.search}${url.hash}`);
+  }
 }
 
 function renderFacts(facts) {
@@ -227,8 +313,10 @@ function renderFacts(facts) {
 function renderProject(index) {
   activeProject = (index + projects.length) % projects.length;
   const project = projects[activeProject];
+  const categoryProjects = projects.filter((item) => item.category === project.category);
+  const categoryProjectIndex = categoryProjects.indexOf(project);
   projectTitle.textContent = project.title;
-  projectIndex.textContent = `${String(activeProject + 1).padStart(2, "0")} / ${String(projects.length).padStart(2, "0")}`;
+  projectIndex.textContent = `${String(categoryProjectIndex + 1).padStart(2, "0")} / ${String(categoryProjects.length).padStart(2, "0")}`;
   projectCategory.textContent = project.category;
   projectDescription.textContent = project.description;
   renderFacts(project.facts);
@@ -252,6 +340,9 @@ function renderProject(index) {
 }
 
 function openProject(index) {
+  const project = projects[(index + projects.length) % projects.length];
+  const category = categoryForProject(project);
+  if (!activeCategory || activeCategory.slug !== category.slug) showCategory(category.slug, false);
   renderProject(index);
   projectDialog.showModal();
   document.body.classList.add("is-dialog-open");
@@ -269,8 +360,20 @@ function updateProjectUrl(index = null) {
   const url = new URL(window.location.href);
   url.searchParams.delete("view");
   if (index === null) url.searchParams.delete("project");
-  else url.searchParams.set("project", projects[index].slug);
+  else {
+    const category = categoryForProject(projects[index]);
+    url.searchParams.set("category", category.slug);
+    url.searchParams.set("project", projects[index].slug);
+  }
   window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
+}
+
+function stepProject(direction) {
+  const project = projects[activeProject];
+  const categoryProjects = projects.filter((item) => item.category === project.category);
+  const position = categoryProjects.indexOf(project);
+  const nextProject = categoryProjects[(position + direction + categoryProjects.length) % categoryProjects.length];
+  renderProject(projects.indexOf(nextProject));
 }
 
 function updateViewUrl(view = null) {
@@ -281,14 +384,30 @@ function updateViewUrl(view = null) {
   window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
 }
 
+categoryLanding.addEventListener("click", (event) => {
+  const card = event.target.closest("[data-category]");
+  if (card) showCategory(card.dataset.category);
+});
+
 mosaic.addEventListener("click", (event) => {
+  if (event.target.closest("[data-category-back]")) {
+    showLanding();
+    return;
+  }
   const card = event.target.closest("[data-project]");
   if (card) openProject(Number(card.dataset.project));
 });
 
+document.querySelectorAll("[data-home]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    showLanding();
+  });
+});
+
 document.querySelector("[data-close-project]").addEventListener("click", () => closeDialog(projectDialog));
-document.querySelector("[data-project-prev]").addEventListener("click", () => renderProject(activeProject - 1));
-document.querySelector("[data-project-next]").addEventListener("click", () => renderProject(activeProject + 1));
+document.querySelector("[data-project-prev]").addEventListener("click", () => stepProject(-1));
+document.querySelector("[data-project-next]").addEventListener("click", () => stepProject(1));
 
 document.querySelectorAll("[data-open]").forEach((button) => {
   button.addEventListener("click", () => {
@@ -318,18 +437,29 @@ document.querySelectorAll("dialog").forEach((dialog) => {
 
 document.addEventListener("keydown", (event) => {
   if (!projectDialog.open) return;
-  if (event.key === "ArrowLeft") renderProject(activeProject - 1);
-  if (event.key === "ArrowRight") renderProject(activeProject + 1);
+  if (event.key === "ArrowLeft") stepProject(-1);
+  if (event.key === "ArrowRight") stepProject(1);
 });
 
 document.querySelector("#year").textContent = new Date().getFullYear();
-renderMosaic();
+renderCategoryLanding();
 
-const requestedProject = new URLSearchParams(window.location.search).get("project");
+const initialParams = new URLSearchParams(window.location.search);
+const requestedProject = initialParams.get("project");
 const requestedProjectIndex = projects.findIndex((project) => project.slug === requestedProject);
-if (requestedProjectIndex >= 0) openProject(requestedProjectIndex);
+const requestedCategory = initialParams.get("category");
 
-const requestedView = new URLSearchParams(window.location.search).get("view");
+if (requestedProjectIndex >= 0) {
+  const category = categoryForProject(projects[requestedProjectIndex]);
+  showCategory(category.slug, false);
+  openProject(requestedProjectIndex);
+} else if (categories.some((category) => category.slug === requestedCategory)) {
+  showCategory(requestedCategory, false);
+} else {
+  showLanding(false);
+}
+
+const requestedView = initialParams.get("view");
 if (requestedProjectIndex < 0 && requestedView === "info") {
   document.querySelector("#aboutDialog").showModal();
   document.body.classList.add("is-dialog-open");
