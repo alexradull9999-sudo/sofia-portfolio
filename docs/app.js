@@ -4,7 +4,7 @@ const categories = [
   {
     name: "Архитектура",
     slug: "architecture",
-    cover: `${MEDIA_ROOT}/02 Архитектура/универ/001 визуализация.webp`,
+    cover: "./media/architecture-cover.png",
   },
   {
     name: "Интерьеры",
