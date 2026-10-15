@@ -4,4 +4,4 @@
 
 Сайт публикуется через GitHub Pages из папки `docs`. Изображения в ней оптимизированы для веба; рабочие PSD, PLN, BPN, DOCX и PDF в репозиторий не загружаются.
 
-Публичный адрес: <https://alexradull9999-sudo.github.io/sofia-portfolio/>
+Публичный адрес: <https://masarchi.space/>
